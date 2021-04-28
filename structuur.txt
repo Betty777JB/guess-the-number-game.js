@@ -1,0 +1,20 @@
+zeg: welkom
+vraag: name
+test: name (null en leeg)
+zeg: hallo name
+
+vraag: minimum
+vraag: maximum
+kies getal
+
+doe zolang (<max_gokken) en niet gewonnen:
+    vraag: guess
+    test: guess
+    check: guess == getal
+        ja? -> zeg: Gewonnen! & stoppen
+        anders -> zeg: gok opnieuw & check #gokken<max_gokken
+            ja? -> zeg: aantal gokken
+            anders -> zeg: laatste gok
+            verhoog #gokken
+opnieuw
+als klaar zeg: goodbye
